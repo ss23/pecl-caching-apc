@@ -124,6 +124,7 @@ ZEND_BEGIN_MODULE_GLOBALS(apc)
 #endif
     char *serializer_name;       /* the serializer config option */
     apc_serializer_t *serializer;/* the actual serializer in use */
+    zend_bool skip_cache;        /* if error occurred, skip caching for this request lifecycle */
     HashTable *compiler_hook_func_table;
     HashTable *compiler_hook_class_table;
     int compile_nesting;
